@@ -1,0 +1,8 @@
+{
+	"SourceFiles": [
+		"C:\\Users\\beatriz.fulgencio\\Documents\\GitHub\\Ue4-c-Course\\MyProject\\Source\\MyProject\\MyProject.Build.cs",
+		"C:\\Users\\beatriz.fulgencio\\Documents\\GitHub\\Ue4-c-Course\\MyProject\\Source\\MyProject.Target.cs",
+		"C:\\Users\\beatriz.fulgencio\\Documents\\GitHub\\Ue4-c-Course\\MyProject\\Source\\MyProjectEditor.Target.cs"
+	],
+	"EngineVersion": "4.27.2"
+}
