@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\MyProject.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{5A364DB0-1AAA-4533-96EA-F6B2D4A78AF2}</UniqueIdentifier>
+      <UniqueIdentifier>{BC4583C2-5684-4219-8793-E60C1303CDC4}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\MyProject.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{46B452AD-2758-4497-BD31-B14D3CF429E8}</UniqueIdentifier>
+      <UniqueIdentifier>{1191D923-D236-4C3C-9C36-105253BD2E27}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -23,13 +23,28 @@
     <None Include="..\..\Config\DefaultGame.ini">
       <Filter>Config</Filter>
     </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
     <Filter Include="Source\MyProject">
-      <UniqueIdentifier>{A7BC318E-A35D-4D0E-91DE-B2E4846BF5B8}</UniqueIdentifier>
+      <UniqueIdentifier>{A63B87C4-E067-4E32-A828-FE3E3F56591C}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\MyProject\ExplosiveItem.cpp">
+      <Filter>Source\MyProject</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\MyProject\ExplosiveItem.h">
+      <Filter>Source\MyProject</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\MyProject\MyCharacter.cpp">
       <Filter>Source\MyProject</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\MyProject\MyCharacter.h">
+      <Filter>Source\MyProject</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\MyProject\MyMagicProjectile.cpp">
+      <Filter>Source\MyProject</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\MyProject\MyMagicProjectile.h">
       <Filter>Source\MyProject</Filter>
     </ClInclude>
     <None Include="..\..\Source\MyProject\MyProject.Build.cs">

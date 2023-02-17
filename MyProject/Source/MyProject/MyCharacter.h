@@ -1,11 +1,14 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #pragma once
+//includes
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
 #include "MyCharacter.generated.h"
 
+
+//forward declarations
 class UCameraComponent;
 class USpringArmComponent;
 
@@ -13,6 +16,11 @@ UCLASS()
 class MYPROJECT_API AMyCharacter : public ACharacter
 {
 	GENERATED_BODY()
+
+
+protected:
+	UPROPERTY(EditAnywhere)
+	TSubclassOf<AActor> ProjectileClass;
 
 public:
 	// Sets default values for this character's properties
@@ -31,6 +39,8 @@ protected:
 
 	void MoveForward(float value);
 	void MoveRight(float value);
+	void PrimaryAttack();
+
 
 public:	
 	// Called every frame

@@ -16,11 +16,11 @@ AMyCharacter::AMyCharacter()
 	PrimaryActorTick.bCanEverTick = true;
 
 
-	SpringArmComp = CreateAbstractDefaultSubobject<USpringArmComponent>("SpringArmComp");
-	SpringArmComp->SetupAttachment(RootComponent); //root component = the first component in the hierarchy of the components (in this case the capsule component )
+	SpringArmComp = CreateDefaultSubobject<USpringArmComponent>("SpringArmComp");
 	SpringArmComp->bUsePawnControlRotation = true;
+	SpringArmComp->SetupAttachment(RootComponent); //root component = the first component in the hierarchy of the components (in this case the capsule component )
 
-    CameraComp = CreateAbstractDefaultSubobject<UCameraComponent>("CameraComp");
+    CameraComp = CreateDefaultSubobject<UCameraComponent>("CameraComp");
 	CameraComp->SetupAttachment(SpringArmComp);
 
 	GetCharacterMovement()->bOrientRotationToMovement = true;
@@ -54,6 +54,8 @@ void AMyCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompone
 
 	PlayerInputComponent->BindAxis("Turn", this, &APawn::AddControllerYawInput); //yaw-> horizontalRotation / pitch -> verticalRotation
 	PlayerInputComponent->BindAxis("LookUp", this, &APawn::AddControllerPitchInput);
+
+	PlayerInputComponent->BindAction("PrimaryAttack", IE_Pressed, this, &AMyCharacter::PrimaryAttack);
 }
 
 void AMyCharacter::MoveForward(float value)
@@ -78,4 +80,16 @@ void AMyCharacter::MoveRight(float value)
 	FVector RightVector = FRotationMatrix(ControlRot).GetScaledAxis(EAxis::Y);
 
 	AddMovementInput(RightVector, value);
+}
+
+void AMyCharacter::PrimaryAttack()
+{
+	FVector handLocation = GetMesh()->GetSocketLocation("hand_l");
+
+	FTransform SpawnTM = FTransform(GetControlRotation(), handLocation);
+
+	FActorSpawnParameters SpawnParams;
+	SpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
+
+	GetWorld()->SpawnActor<AActor>(ProjectileClass, SpawnTM, SpawnParams);
 }

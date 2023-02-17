@@ -1,0 +1,5 @@
+C:\Users\beatriz.fulgencio\Documents\GitHub\Ue4-c-Course\MyProject\Intermediate\Build\Win64\UE4Editor\Development\MyProject\Definitions.MyProject.h
+C:\Users\beatriz.fulgencio\Documents\GitHub\Ue4-c-Course\MyProject\Source\MyProject\ExplosiveItem.h
+C:\Users\beatriz.fulgencio\Documents\GitHub\Ue4-c-Course\MyProject\Intermediate\Build\Win64\UE4Editor\Inc\MyProject\ExplosiveItem.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\PhysicsEngine/RadialForceComponent.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\RadialForceComponent.generated.h
