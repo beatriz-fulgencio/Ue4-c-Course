@@ -24,14 +24,16 @@ AMyMagicProjectile::AMyMagicProjectile()
 	MovementComp->bRotationFollowsVelocity = true;
 	MovementComp->bInitialVelocityInLocalSpace = true;
 
-// 	SphereComp->OnComponentHit.AddDynamic(this, &AMyMagicProjectile::OnCompHit);
+
+// 	this->InitialLifeSpan = 0.5;
+
+	SphereComp->OnComponentHit.AddDynamic(this, &AMyMagicProjectile::OnCompHit);
 }
 
-// void AMyMagicProjectile::OnCompHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit)
-// {
-// 	this->MovementComp->set
-// }
-
+void AMyMagicProjectile::OnCompHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit)
+{
+	this->Destroy(true);
+}
 // Called when the game starts or when spawned
 void AMyMagicProjectile::BeginPlay()
 {

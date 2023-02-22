@@ -8,14 +8,26 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class UPrimitiveComponent;
+class AActor;
+struct FVector;
+struct FHitResult;
 #ifdef MYPROJECT_MyMagicProjectile_generated_h
 #error "MyMagicProjectile.generated.h already included, missing '#pragma once' in MyMagicProjectile.h"
 #endif
 #define MYPROJECT_MyMagicProjectile_generated_h
 
 #define MyProject_Source_MyProject_MyMagicProjectile_h_19_SPARSE_DATA
-#define MyProject_Source_MyProject_MyMagicProjectile_h_19_RPC_WRAPPERS
-#define MyProject_Source_MyProject_MyMagicProjectile_h_19_RPC_WRAPPERS_NO_PURE_DECLS
+#define MyProject_Source_MyProject_MyMagicProjectile_h_19_RPC_WRAPPERS \
+ \
+	DECLARE_FUNCTION(execOnCompHit);
+
+
+#define MyProject_Source_MyProject_MyMagicProjectile_h_19_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execOnCompHit);
+
+
 #define MyProject_Source_MyProject_MyMagicProjectile_h_19_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAMyMagicProjectile(); \

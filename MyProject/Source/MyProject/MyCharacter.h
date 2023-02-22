@@ -33,17 +33,21 @@ protected:
 
 	UPROPERTY(VisibleAnywhere)
 	UCameraComponent* CameraComp;
+
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-
+	//Movement Functions
 	void MoveForward(float value);
 	void MoveRight(float value);
+
+	//Fire Particles
 	void PrimaryAttack();
 
 	UPROPERTY(VisibleAnywhere)
-	bool isJumping;
+		bool isJumping;
 
+	//checks is the player is jumping
 	void CheckJump();
 
 public:	

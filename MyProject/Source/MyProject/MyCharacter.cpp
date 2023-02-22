@@ -15,18 +15,21 @@ AMyCharacter::AMyCharacter()
  	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
-
+	//makes the camera always be able to see the player
 	SpringArmComp = CreateDefaultSubobject<USpringArmComponent>("SpringArmComp");
 	SpringArmComp->bUsePawnControlRotation = true;
 	SpringArmComp->SetupAttachment(RootComponent); //root component = the first component in the hierarchy of the components (in this case the capsule component )
 
+	//sets camera
     CameraComp = CreateDefaultSubobject<UCameraComponent>("CameraComp");
 	CameraComp->SetupAttachment(SpringArmComp);
 
+	//rotate character towards the movement direction
 	GetCharacterMovement()->bOrientRotationToMovement = true;
 
 	bUseControllerRotationYaw = false;
 
+	//sets the initial value to jum to false
 	isJumping = false;
 }
 
@@ -56,19 +59,26 @@ void AMyCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompone
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 
+	//Bind character movement
 	PlayerInputComponent->BindAxis("MoveForward", this, &AMyCharacter::MoveForward); //TBaseDelegate -> passing a function
 	PlayerInputComponent->BindAxis("MoveRight", this, &AMyCharacter::MoveRight);
 
+	//bind camera movement
 	PlayerInputComponent->BindAxis("Turn", this, &APawn::AddControllerYawInput); //yaw-> horizontalRotation / pitch -> verticalRotation
 	PlayerInputComponent->BindAxis("LookUp", this, &APawn::AddControllerPitchInput);
 
+	//bind to fire particles
 	PlayerInputComponent->BindAction("PrimaryAttack", IE_Pressed, this, &AMyCharacter::PrimaryAttack);
 
+	//bind to pressed and released of jump
 	PlayerInputComponent->BindAction("Jump", IE_Pressed, this, &AMyCharacter::CheckJump);
 	PlayerInputComponent->BindAction("Jump", IE_Released, this, &AMyCharacter::CheckJump);
 
 }
 
+
+
+//Control the characters movements in forward vector
 void AMyCharacter::MoveForward(float value)
 {
 	FRotator ControlRot = GetControlRotation();
@@ -78,6 +88,7 @@ void AMyCharacter::MoveForward(float value)
 	AddMovementInput(ControlRot.Vector(), value);
 }
 
+//Control the characters movements in sideways vector
 void AMyCharacter::MoveRight(float value)
 {
 	FRotator ControlRot = GetControlRotation();
@@ -93,19 +104,22 @@ void AMyCharacter::MoveRight(float value)
 	AddMovementInput(RightVector, value);
 }
 
+
+//shoot particles
 void AMyCharacter::PrimaryAttack()
 {
 	FVector handLocation = GetMesh()->GetSocketLocation("hand_l");
 
-	/*GetWorld()->LineTraceSingleByChannel();*/
-
+	//determine the spawn location as the character's hand
 	FTransform SpawnTM = FTransform(GetControlRotation(), handLocation);
 
 	FActorSpawnParameters SpawnParams;
 	SpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
 
+	//spawn
 	GetWorld()->SpawnActor<AActor>(ProjectileClass, SpawnTM, SpawnParams);
 }
+
 
 void AMyCharacter::CheckJump()
 {
