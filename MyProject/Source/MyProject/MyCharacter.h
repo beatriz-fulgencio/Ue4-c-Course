@@ -41,6 +41,10 @@ protected:
 	void MoveRight(float value);
 	void PrimaryAttack();
 
+	UPROPERTY(VisibleAnywhere)
+	bool isJumping;
+
+	void CheckJump();
 
 public:	
 	// Called every frame

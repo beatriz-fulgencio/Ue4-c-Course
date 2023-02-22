@@ -3,6 +3,8 @@
 
 #include "ExplosiveItem.h"
 #include <PhysicsEngine/RadialForceComponent.h>
+#include "Kismet/GameplayStatics.h"
+
 
 // Sets default values
 AExplosiveItem::AExplosiveItem()
@@ -16,11 +18,24 @@ AExplosiveItem::AExplosiveItem()
 
 	ForceComp = CreateDefaultSubobject<URadialForceComponent>("ForceComp");
 	ForceComp->SetupAttachment(ExplosiveStaticMesh);
+	ForceComp->Radius = 500;
+
+	ExplosiveStaticMesh->SetSimulatePhysics(true);
+	ExplosiveStaticMesh->OnComponentHit.AddDynamic(this, &AExplosiveItem::OnCompHit);
+
+
 ;}
+
+void AExplosiveItem::OnCompHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit)
+{
+	ForceComp->ImpulseStrength = 2000;
+	ForceComp->bImpulseVelChange = true;
+	ForceComp->FireImpulse();
+}
 
 // Called when the game starts or when spawned
 void AExplosiveItem::BeginPlay()
-{
+{ 
 	Super::BeginPlay();
 	
 }

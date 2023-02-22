@@ -61,7 +61,8 @@ public: \
 #define MyProject_Source_MyProject_MyCharacter_h_18_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__ProjectileClass() { return STRUCT_OFFSET(AMyCharacter, ProjectileClass); } \
 	FORCEINLINE static uint32 __PPO__SpringArmComp() { return STRUCT_OFFSET(AMyCharacter, SpringArmComp); } \
-	FORCEINLINE static uint32 __PPO__CameraComp() { return STRUCT_OFFSET(AMyCharacter, CameraComp); }
+	FORCEINLINE static uint32 __PPO__CameraComp() { return STRUCT_OFFSET(AMyCharacter, CameraComp); } \
+	FORCEINLINE static uint32 __PPO__isJumping() { return STRUCT_OFFSET(AMyCharacter, isJumping); }
 
 
 #define MyProject_Source_MyProject_MyCharacter_h_15_PROLOG

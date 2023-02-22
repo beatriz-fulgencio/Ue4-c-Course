@@ -23,7 +23,14 @@ AMyMagicProjectile::AMyMagicProjectile()
 	MovementComp->InitialSpeed = 1000.0f;
 	MovementComp->bRotationFollowsVelocity = true;
 	MovementComp->bInitialVelocityInLocalSpace = true;
+
+// 	SphereComp->OnComponentHit.AddDynamic(this, &AMyMagicProjectile::OnCompHit);
 }
+
+// void AMyMagicProjectile::OnCompHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit)
+// {
+// 	this->MovementComp->set
+// }
 
 // Called when the game starts or when spawned
 void AMyMagicProjectile::BeginPlay()

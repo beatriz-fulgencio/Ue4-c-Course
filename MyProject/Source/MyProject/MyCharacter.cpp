@@ -26,6 +26,8 @@ AMyCharacter::AMyCharacter()
 	GetCharacterMovement()->bOrientRotationToMovement = true;
 
 	bUseControllerRotationYaw = false;
+
+	isJumping = false;
 }
 
 // Called when the game starts or when spawned
@@ -42,6 +44,11 @@ void AMyCharacter::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
+	if(isJumping)
+	{
+		Jump();
+	}
+
 }
 
 // Called to bind functionality to input
@@ -56,6 +63,10 @@ void AMyCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompone
 	PlayerInputComponent->BindAxis("LookUp", this, &APawn::AddControllerPitchInput);
 
 	PlayerInputComponent->BindAction("PrimaryAttack", IE_Pressed, this, &AMyCharacter::PrimaryAttack);
+
+	PlayerInputComponent->BindAction("Jump", IE_Pressed, this, &AMyCharacter::CheckJump);
+	PlayerInputComponent->BindAction("Jump", IE_Released, this, &AMyCharacter::CheckJump);
+
 }
 
 void AMyCharacter::MoveForward(float value)
@@ -86,10 +97,23 @@ void AMyCharacter::PrimaryAttack()
 {
 	FVector handLocation = GetMesh()->GetSocketLocation("hand_l");
 
+	/*GetWorld()->LineTraceSingleByChannel();*/
+
 	FTransform SpawnTM = FTransform(GetControlRotation(), handLocation);
 
 	FActorSpawnParameters SpawnParams;
 	SpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
 
 	GetWorld()->SpawnActor<AActor>(ProjectileClass, SpawnTM, SpawnParams);
+}
+
+void AMyCharacter::CheckJump()
+{
+	if(isJumping)
+	{
+		isJumping = false;
+	} else
+	{
+		isJumping = true;
+	}
 }

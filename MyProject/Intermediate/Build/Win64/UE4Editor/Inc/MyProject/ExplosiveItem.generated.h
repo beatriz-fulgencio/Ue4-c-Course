@@ -8,14 +8,26 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class UPrimitiveComponent;
+class AActor;
+struct FVector;
+struct FHitResult;
 #ifdef MYPROJECT_ExplosiveItem_generated_h
 #error "ExplosiveItem.generated.h already included, missing '#pragma once' in ExplosiveItem.h"
 #endif
 #define MYPROJECT_ExplosiveItem_generated_h
 
 #define MyProject_Source_MyProject_ExplosiveItem_h_15_SPARSE_DATA
-#define MyProject_Source_MyProject_ExplosiveItem_h_15_RPC_WRAPPERS
-#define MyProject_Source_MyProject_ExplosiveItem_h_15_RPC_WRAPPERS_NO_PURE_DECLS
+#define MyProject_Source_MyProject_ExplosiveItem_h_15_RPC_WRAPPERS \
+ \
+	DECLARE_FUNCTION(execOnCompHit);
+
+
+#define MyProject_Source_MyProject_ExplosiveItem_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execOnCompHit);
+
+
 #define MyProject_Source_MyProject_ExplosiveItem_h_15_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAExplosiveItem(); \
