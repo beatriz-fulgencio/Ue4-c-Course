@@ -1,0 +1,5 @@
+C:\Users\beatriz.fulgencio\Documents\GitHub\Ue4-c-Course\MyProject\Intermediate\Build\Win64\UE4Editor\Development\MyProject\Definitions.MyProject.h
+C:\Users\beatriz.fulgencio\Documents\GitHub\Ue4-c-Course\MyProject\Source\MyProject\MyMyBarrel.h
+C:\Users\beatriz.fulgencio\Documents\GitHub\Ue4-c-Course\MyProject\Source\MyProject\MyBaseActor.h
+C:\Users\beatriz.fulgencio\Documents\GitHub\Ue4-c-Course\MyProject\Intermediate\Build\Win64\UE4Editor\Inc\MyProject\MyBaseActor.generated.h
+C:\Users\beatriz.fulgencio\Documents\GitHub\Ue4-c-Course\MyProject\Intermediate\Build\Win64\UE4Editor\Inc\MyProject\MyMyBarrel.generated.h

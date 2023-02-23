@@ -1,0 +1,18 @@
+C:\Users\beatriz.fulgencio\Documents\GitHub\Ue4-c-Course\MyProject\Intermediate\Build\Win64\UE4Editor\Development\MyProject\Definitions.MyProject.h
+C:\Users\beatriz.fulgencio\Documents\GitHub\Ue4-c-Course\MyProject\Source\MyProject\MyActorSpawnerRight.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\list
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\xmemory
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\limits
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\cfloat
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\cwchar
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\cstdio
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE\isa_availability.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\Engine/TargetPoint.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\TargetPoint.generated.h
+C:\Users\beatriz.fulgencio\Documents\GitHub\Ue4-c-Course\MyProject\Intermediate\Build\Win64\UE4Editor\Inc\MyProject\MyActorSpawnerRight.generated.h
+C:\Users\beatriz.fulgencio\Documents\GitHub\Ue4-c-Course\MyProject\Source\MyProject\MyBaseActor.h
+C:\Users\beatriz.fulgencio\Documents\GitHub\Ue4-c-Course\MyProject\Intermediate\Build\Win64\UE4Editor\Inc\MyProject\MyBaseActor.generated.h
+C:\Users\beatriz.fulgencio\Documents\GitHub\Ue4-c-Course\MyProject\Source\MyProject\MyMyBarrel.h
+C:\Users\beatriz.fulgencio\Documents\GitHub\Ue4-c-Course\MyProject\Intermediate\Build\Win64\UE4Editor\Inc\MyProject\MyMyBarrel.generated.h
+C:\Users\beatriz.fulgencio\Documents\GitHub\Ue4-c-Course\MyProject\Source\MyProject\MyMyBarrelExplosive.h
+C:\Users\beatriz.fulgencio\Documents\GitHub\Ue4-c-Course\MyProject\Intermediate\Build\Win64\UE4Editor\Inc\MyProject\MyMyBarrelExplosive.generated.h
