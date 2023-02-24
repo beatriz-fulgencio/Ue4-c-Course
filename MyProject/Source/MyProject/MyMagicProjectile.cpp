@@ -2,6 +2,8 @@
 
 
 #include "MyMagicProjectile.h"
+
+#include "MyMyBarrelExplosive.h"
 #include "Components/SphereComponent.h"
 #include "GameFramework/ProjectileMovementComponent.h"
 #include "Particles/ParticleSystemComponent.h"
@@ -33,6 +35,8 @@ AMyMagicProjectile::AMyMagicProjectile()
 void AMyMagicProjectile::OnCompHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit)
 {
 	this->Destroy(true);
+
+	OtherActor->Destroy(true);
 }
 // Called when the game starts or when spawned
 void AMyMagicProjectile::BeginPlay()

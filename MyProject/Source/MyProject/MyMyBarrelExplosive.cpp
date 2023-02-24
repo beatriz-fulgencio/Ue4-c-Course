@@ -15,19 +15,14 @@ AMyMyBarrelExplosive::AMyMyBarrelExplosive()
 	ExplosiveStaticMesh = CreateDefaultSubobject<UStaticMeshComponent>("ExplosiveStaticMesh");
 	ExplosiveStaticMesh->SetupAttachment(RootComponent);
 
-	ForceComp = CreateDefaultSubobject<URadialForceComponent>("ForceComp");
-	ForceComp->SetupAttachment(ExplosiveStaticMesh);
-	ForceComp->Radius = 500;
 
 	ExplosiveStaticMesh->SetSimulatePhysics(true);
-	ExplosiveStaticMesh->OnComponentHit.AddDynamic(this, &AMyMyBarrelExplosive::OnCompHit);
+	//ExplosiveStaticMesh->OnComponentHit.AddDynamic(this, &AMyMyBarrelExplosive::OnCompHit);
 	ExplosiveStaticMesh->SetCollisionObjectType(ECC_PhysicsBody);
 
 }
 
-void AMyMyBarrelExplosive::OnCompHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit)
-{
-	ForceComp->ImpulseStrength = 2000;
-	ForceComp->bImpulseVelChange = true;
-	ForceComp->FireImpulse();
-}
+// void AMyMyBarrelExplosive::OnCompHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit)
+// {
+// 	this->Destroy(true);
+// }

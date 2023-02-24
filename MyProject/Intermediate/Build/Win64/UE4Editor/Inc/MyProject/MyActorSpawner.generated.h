@@ -81,6 +81,7 @@ public: \
 	FORCEINLINE static uint32 __PPO__AvgSpawnTime() { return STRUCT_OFFSET(AMyActorSpawner, AvgSpawnTime); } \
 	FORCEINLINE static uint32 __PPO__RandomSpawnTimeOffset() { return STRUCT_OFFSET(AMyActorSpawner, RandomSpawnTimeOffset); } \
 	FORCEINLINE static uint32 __PPO__timer() { return STRUCT_OFFSET(AMyActorSpawner, timer); } \
+	FORCEINLINE static uint32 __PPO__timeRemaning() { return STRUCT_OFFSET(AMyActorSpawner, timeRemaning); } \
 	FORCEINLINE static uint32 __PPO__textTimer() { return STRUCT_OFFSET(AMyActorSpawner, textTimer); }
 
 

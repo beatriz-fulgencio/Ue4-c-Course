@@ -8,26 +8,14 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
-class UPrimitiveComponent;
-class AActor;
-struct FVector;
-struct FHitResult;
 #ifdef MYPROJECT_MyMyBarrelExplosive_generated_h
 #error "MyMyBarrelExplosive.generated.h already included, missing '#pragma once' in MyMyBarrelExplosive.h"
 #endif
 #define MYPROJECT_MyMyBarrelExplosive_generated_h
 
 #define MyProject_Source_MyProject_MyMyBarrelExplosive_h_19_SPARSE_DATA
-#define MyProject_Source_MyProject_MyMyBarrelExplosive_h_19_RPC_WRAPPERS \
- \
-	DECLARE_FUNCTION(execOnCompHit);
-
-
-#define MyProject_Source_MyProject_MyMyBarrelExplosive_h_19_RPC_WRAPPERS_NO_PURE_DECLS \
- \
-	DECLARE_FUNCTION(execOnCompHit);
-
-
+#define MyProject_Source_MyProject_MyMyBarrelExplosive_h_19_RPC_WRAPPERS
+#define MyProject_Source_MyProject_MyMyBarrelExplosive_h_19_RPC_WRAPPERS_NO_PURE_DECLS
 #define MyProject_Source_MyProject_MyMyBarrelExplosive_h_19_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAMyMyBarrelExplosive(); \
@@ -70,10 +58,7 @@ public: \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(AMyMyBarrelExplosive)
 
 
-#define MyProject_Source_MyProject_MyMyBarrelExplosive_h_19_PRIVATE_PROPERTY_OFFSET \
-	FORCEINLINE static uint32 __PPO__ForceComp() { return STRUCT_OFFSET(AMyMyBarrelExplosive, ForceComp); }
-
-
+#define MyProject_Source_MyProject_MyMyBarrelExplosive_h_19_PRIVATE_PROPERTY_OFFSET
 #define MyProject_Source_MyProject_MyMyBarrelExplosive_h_16_PROLOG
 #define MyProject_Source_MyProject_MyMyBarrelExplosive_h_19_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \

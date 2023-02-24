@@ -17,7 +17,7 @@ AMyActorSpawner::AMyActorSpawner()
 	SpawnBox = CreateDefaultSubobject<UBoxComponent>(TEXT("SpawnBox"));
 	textTimer = CreateDefaultSubobject<UTextRenderComponent>(TEXT("TextTimer"));
 
-	timer = 12;
+	timer = 120;
 
 }
 
@@ -77,7 +77,7 @@ void AMyActorSpawner::UpdateTimer()
 {
 	 float timePassed = UGameplayStatics::GetTimeSeconds(this);
 
-	 float timeRemaning = timer - timePassed;
+	  timeRemaning = timer - timePassed;
 
 	 float time = timeRemaning / 60;
 	 int min = static_cast<int>(time);

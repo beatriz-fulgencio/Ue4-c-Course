@@ -76,6 +76,9 @@ protected:
 	float timer;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float timeRemaning;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	UTextRenderComponent* textTimer;
 
 	//Helper for timing

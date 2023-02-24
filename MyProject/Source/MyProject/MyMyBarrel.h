@@ -17,4 +17,7 @@ class MYPROJECT_API AMyMyBarrel : public AMyBaseActor
 public:
 	AMyMyBarrel();
 
+protected:
+// 	UFUNCTION()
+// 	void OnCompHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit);
 };

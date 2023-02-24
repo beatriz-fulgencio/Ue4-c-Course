@@ -212,6 +212,10 @@ void EmptyLinkFunctionForGeneratedCodeMyActorSpawner() {}
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_timer;
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_timeRemaning_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_timeRemaning;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_textTimer_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_textTimer;
@@ -298,6 +302,13 @@ void EmptyLinkFunctionForGeneratedCodeMyActorSpawner() {}
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AMyActorSpawner_Statics::NewProp_timer = { "timer", nullptr, (EPropertyFlags)0x0020080000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AMyActorSpawner, timer), METADATA_PARAMS(Z_Construct_UClass_AMyActorSpawner_Statics::NewProp_timer_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AMyActorSpawner_Statics::NewProp_timer_MetaData)) };
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMyActorSpawner_Statics::NewProp_timeRemaning_MetaData[] = {
+		{ "Category", "MyActorSpawner" },
+		{ "ModuleRelativePath", "MyActorSpawner.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AMyActorSpawner_Statics::NewProp_timeRemaning = { "timeRemaning", nullptr, (EPropertyFlags)0x0020080000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AMyActorSpawner, timeRemaning), METADATA_PARAMS(Z_Construct_UClass_AMyActorSpawner_Statics::NewProp_timeRemaning_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AMyActorSpawner_Statics::NewProp_timeRemaning_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AMyActorSpawner_Statics::NewProp_textTimer_MetaData[] = {
 		{ "Category", "MyActorSpawner" },
 		{ "EditInline", "true" },
@@ -313,6 +324,7 @@ void EmptyLinkFunctionForGeneratedCodeMyActorSpawner() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyActorSpawner_Statics::NewProp_AvgSpawnTime,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyActorSpawner_Statics::NewProp_RandomSpawnTimeOffset,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyActorSpawner_Statics::NewProp_timer,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyActorSpawner_Statics::NewProp_timeRemaning,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyActorSpawner_Statics::NewProp_textTimer,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AMyActorSpawner_Statics::StaticCppClassTypeInfo = {
@@ -342,7 +354,7 @@ void EmptyLinkFunctionForGeneratedCodeMyActorSpawner() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AMyActorSpawner, 2040517170);
+	IMPLEMENT_CLASS(AMyActorSpawner, 2509293846);
 	template<> MYPROJECT_API UClass* StaticClass<AMyActorSpawner>()
 	{
 		return AMyActorSpawner::StaticClass();
