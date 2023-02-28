@@ -114,6 +114,7 @@ void AMyActorSpawner::SpawnActorReScheduled()
 
 void AMyActorSpawner::DestroyTheRest()
 {
+	ShouldSpawn = false;
 	TArray<AActor*> BarrelsLefting;
 
 	UGameplayStatics::GetAllActorsOfClass(GetWorld(), ActorClassToSpawn1,BarrelsLefting);
