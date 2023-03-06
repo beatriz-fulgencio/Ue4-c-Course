@@ -2,4 +2,12 @@ C:\Users\beatriz.fulgencio\Documents\GitHub\Ue4-c-Course\MyProject\Intermediate\
 C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h
 C:\Users\beatriz.fulgencio\Documents\GitHub\Ue4-c-Course\MyProject\Source\MyProject/MyActorSpawner.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\Components/BoxComponent.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\Components/ShapeComponent.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ShapeComponent.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\BoxComponent.generated.h
+C:\Users\beatriz.fulgencio\Documents\GitHub\Ue4-c-Course\MyProject\Source\MyProject\MyBaseActor.h
+C:\Users\beatriz.fulgencio\Documents\GitHub\Ue4-c-Course\MyProject\Intermediate\Build\Win64\UE4Editor\Inc\MyProject\MyBaseActor.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\Components/TextRenderComponent.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\TextRenderComponent.generated.h
 C:\Users\beatriz.fulgencio\Documents\GitHub\Ue4-c-Course\MyProject\Intermediate\Build\Win64\UE4Editor\Inc\MyProject\MyActorSpawner.generated.h

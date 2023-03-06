@@ -47,6 +47,17 @@ protected:
 	UPROPERTY(VisibleAnywhere)
 		bool isJumping;
 
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
+		bool Spawned;
+
+	UFUNCTION()
+	void TriggerAttack();
+
+
+	FTimerHandle TriggerAttackTimerHandle;
+
+	void CheckSpawn();
+
 	//checks is the player is jumping
 	void CheckJump();
 
@@ -56,5 +67,7 @@ public:
 
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
+
+	
 
 };

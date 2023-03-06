@@ -13,4 +13,9 @@ AMyMyBarrel::AMyMyBarrel()
 	ExplosiveStaticMesh->SetupAttachment(RootComponent);
 
 	ExplosiveStaticMesh->SetSimulatePhysics(true);
+
+	//ExplosiveStaticMesh->OnComponentHit.AddDynamic(this, &AMyMyBarrel::OnCompHit);
+	ExplosiveStaticMesh->SetCollisionObjectType(ECC_PhysicsBody);
 }
+
+

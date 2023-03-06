@@ -29,8 +29,11 @@ AMyCharacter::AMyCharacter()
 
 	bUseControllerRotationYaw = false;
 
-	//sets the initial value to jum to false
+	//sets the initial value to jump to false
 	isJumping = false;
+
+	//sets the initial value of spawned to false
+	Spawned = false;
 }
 
 // Called when the game starts or when spawned
@@ -69,6 +72,8 @@ void AMyCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompone
 
 	//bind to fire particles
 	PlayerInputComponent->BindAction("PrimaryAttack", IE_Pressed, this, &AMyCharacter::PrimaryAttack);
+	PlayerInputComponent->BindAction("PrimaryAttack", IE_Released, this, &AMyCharacter::PrimaryAttack);
+
 
 	//bind to pressed and released of jump
 	PlayerInputComponent->BindAction("Jump", IE_Pressed, this, &AMyCharacter::CheckJump);
@@ -108,18 +113,42 @@ void AMyCharacter::MoveRight(float value)
 //shoot particles
 void AMyCharacter::PrimaryAttack()
 {
-	FVector handLocation = GetMesh()->GetSocketLocation("hand_l");
+	CheckSpawn();
 
-	//determine the spawn location as the character's hand
-	FTransform SpawnTM = FTransform(GetControlRotation(), handLocation);
+	if (Spawned) {
 
-	FActorSpawnParameters SpawnParams;
-	SpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
-
-	//spawn
-	GetWorld()->SpawnActor<AActor>(ProjectileClass, SpawnTM, SpawnParams);
+		GetWorld()->GetTimerManager().SetTimer(TriggerAttackTimerHandle, this, &AMyCharacter::TriggerAttack, .2f, false);
+	}
 }
 
+
+void AMyCharacter::TriggerAttack()
+
+{
+	/*if (Spawned){*/
+		FVector handLocation = GetMesh()->GetSocketLocation("Muzzle_01");
+
+		//determine the spawn location as the character's hand
+		FTransform SpawnTM = FTransform(GetControlRotation(), handLocation);
+
+		FActorSpawnParameters SpawnParams;
+		SpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
+
+		//spawn
+		GetWorld()->SpawnActor<AActor>(ProjectileClass, SpawnTM, SpawnParams);
+	/*}*/
+}
+
+void AMyCharacter::CheckSpawn()
+{
+	if(Spawned)
+	{
+		Spawned = false;
+	} else
+	{
+		Spawned = true;
+	}
+}
 
 void AMyCharacter::CheckJump()
 {

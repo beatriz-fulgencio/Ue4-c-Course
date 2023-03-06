@@ -22,11 +22,9 @@ public:
 	AMyMyBarrelExplosive();
 
 protected:
-	UPROPERTY(VisibleAnywhere)
-	URadialForceComponent* ForceComp;
 
-	UFUNCTION()
-	void OnCompHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit);
+// 	UFUNCTION()
+// 	void OnCompHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit);
 
 public:
 

@@ -14,8 +14,16 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define MYPROJECT_MyCharacter_generated_h
 
 #define MyProject_Source_MyProject_MyCharacter_h_18_SPARSE_DATA
-#define MyProject_Source_MyProject_MyCharacter_h_18_RPC_WRAPPERS
-#define MyProject_Source_MyProject_MyCharacter_h_18_RPC_WRAPPERS_NO_PURE_DECLS
+#define MyProject_Source_MyProject_MyCharacter_h_18_RPC_WRAPPERS \
+ \
+	DECLARE_FUNCTION(execTriggerAttack);
+
+
+#define MyProject_Source_MyProject_MyCharacter_h_18_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execTriggerAttack);
+
+
 #define MyProject_Source_MyProject_MyCharacter_h_18_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAMyCharacter(); \
@@ -62,7 +70,8 @@ public: \
 	FORCEINLINE static uint32 __PPO__ProjectileClass() { return STRUCT_OFFSET(AMyCharacter, ProjectileClass); } \
 	FORCEINLINE static uint32 __PPO__SpringArmComp() { return STRUCT_OFFSET(AMyCharacter, SpringArmComp); } \
 	FORCEINLINE static uint32 __PPO__CameraComp() { return STRUCT_OFFSET(AMyCharacter, CameraComp); } \
-	FORCEINLINE static uint32 __PPO__isJumping() { return STRUCT_OFFSET(AMyCharacter, isJumping); }
+	FORCEINLINE static uint32 __PPO__isJumping() { return STRUCT_OFFSET(AMyCharacter, isJumping); } \
+	FORCEINLINE static uint32 __PPO__Spawned() { return STRUCT_OFFSET(AMyCharacter, Spawned); }
 
 
 #define MyProject_Source_MyProject_MyCharacter_h_15_PROLOG
