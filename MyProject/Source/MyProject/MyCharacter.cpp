@@ -117,7 +117,7 @@ void AMyCharacter::PrimaryAttack()
 
 	if (Spawned) {
 
-		GetWorld()->GetTimerManager().SetTimer(TriggerAttackTimerHandle, this, &AMyCharacter::TriggerAttack, .2f, false);
+		GetWorld()->GetTimerManager().SetTimer(TriggerAttackTimerHandle, this, &AMyCharacter::TriggerAttack, .2f, false); // delays the spawn so that the animation can play
 	}
 }
 
@@ -125,7 +125,6 @@ void AMyCharacter::PrimaryAttack()
 void AMyCharacter::TriggerAttack()
 
 {
-	/*if (Spawned){*/
 		FVector handLocation = GetMesh()->GetSocketLocation("Muzzle_01");
 
 		//determine the spawn location as the character's hand
@@ -136,7 +135,6 @@ void AMyCharacter::TriggerAttack()
 
 		//spawn
 		GetWorld()->SpawnActor<AActor>(ProjectileClass, SpawnTM, SpawnParams);
-	/*}*/
 }
 
 void AMyCharacter::CheckSpawn()
