@@ -8,7 +8,7 @@
 #include "MyCharacter.generated.h"
 
 
-//forward declarations
+//forward declarations -> lets the compiler know that the include will come in the cpp file
 class UCameraComponent;
 class USpringArmComponent;
 
